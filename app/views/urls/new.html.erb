@@ -1,13 +1,14 @@
 <h1>Link Shortener</h1>
-<%= form_for @shortened_url do |form| %>
 
-  <p>
-    <%= form.label :url, "Your URL:" %>
-    <%= form.text_field :url %>
-  </p>
+<%= bootstrap_form_for @shortened_url do |form| %>
+  <%= form.text_field :url, placeholder: "Your URL", hide_label: true %>
+  <%= form.submit "Shorten my URL", class: "btn btn-primary" %>
+<% end %>
 
-  <p class='buttons'>
-    <%= form.submit "Shorten my URL" %>
-  </p>
-
+<% if flash[:shortened_id].present? %>
+<div id="link" class="alert alert-success" role="alert">
+  <a class="shortened-link" id="fe_text">
+    <%= link_to url_url(flash[:shortened_id]), url_url(flash[:shortened_id]) %>
+  </a>
+</div>
 <% end %>

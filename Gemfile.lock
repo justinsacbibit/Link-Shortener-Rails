@@ -28,6 +28,11 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (3.1.0.20140911)
+      execjs
+    bootstrap-sass (3.2.0.2)
+      sass (~> 3.2)
+    bootstrap_form (2.2.0)
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -83,6 +88,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     spring (1.1.3)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -103,11 +111,16 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    zeroclipboard-rails (0.1.0)
+      railties (>= 3.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
+  bootstrap-sass (~> 3.2.0)
+  bootstrap_form
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
@@ -115,6 +128,8 @@ DEPENDENCIES
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  simple_form
   spring
   turbolinks
   uglifier (>= 1.3.0)
+  zeroclipboard-rails

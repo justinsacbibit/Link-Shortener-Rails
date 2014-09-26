@@ -7,23 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
-<% if flash[:shortened_id].present? %>
-  <p class="shortened-link">
-    The shortened url is available <%= link_to 'here', url_url(flash[:shortened_id]) %>.
-    (Right click and copy link to share it).
-  </p>
-<% end %>
-
-<% if @shortened_url.errors[:url].any? %>
-  <p class='error-messages'>
-    The given url <%= @shortened_url.errors[:url].to_sentence %>.
-  </p>
-<% end %>
-<div class="footer">
-  <center style="color: #333; font-family: Courier; font-size: 11px;">
-    <br /><br />&copy; Made with love using Rails
-  </center>
-</div>
+  <div class="container-fluid">
+    <div class="col-md-6 col-md-offset-3">
+      <%= yield %>
+      <div class="footer">
+        <center style="color: #333; font-family: Courier; font-size: 11px;">
+          <br /><br />Made with love using Rails
+        </center>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
