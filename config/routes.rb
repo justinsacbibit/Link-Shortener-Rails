@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :urls, :only => [:show, :new, :create]
-  get ":id" => "urls#show"
-  root :to => "urls#new"
-  
+  get "/urls", to: redirect("/urls/new")
+  get "/:id", to: "urls#show"
+  root :to => redirect("/urls/new")
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
