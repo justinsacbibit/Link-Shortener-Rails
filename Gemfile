@@ -12,6 +12,7 @@ gem 'bootstrap_form'
 gem 'autoprefixer-rails'
 gem 'zeroclipboard-rails'
 gem 'rails_12factor'
+gem 'newrelic_rpm'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
